@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kaiser Test</title>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/lodash/dist/lodash.js"></script>
+		<script src="kaiser.js"></script>
+		<script src="test/test.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Kaiser Test</h1>
+			<div class="my-module" module="testModule">
+				<button class="click-me">Click Me</button>
+				<div id="color-change">Colors</div>
+				<button k-click="directiveTest">Directive Test</button>
+
+				<div k-model="personModel" style="visibility: hidden">
+					<p>Name and age</p>
+					<ul>
+						<li>First Name:  {{name.first}}</li>
+						<li>Last Name:  {{name.last}}</li>
+						<li>Age:  {{age}}</li>
+					</ul>
+				</div>
+				<br><br><br>
+				<p>This is boring.  Look at the code, man...</p>
+			</div>
+		</div>
+	</body>
+</html>
