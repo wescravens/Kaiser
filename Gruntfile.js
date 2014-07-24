@@ -33,13 +33,13 @@ module.exports = function (grunt) {
       }
     },
 
-    pkg: grunt.file.readJSON('package.json'),
-    concat: {
-      dist: {
-        src: ['src/main.js'],
-        dest: 'dist/<%= pkg.name %>.js',
-      },
-    },
+    // pkg: grunt.file.readJSON('package.json'),
+    // concat: {
+    //   dist: {
+    //     src: ['src/main.js'],
+    //     dest: 'dist/<%= pkg.name %>.js',
+    //   },
+    // },
 
     // grunt-open will open your browser at the project's URL
     open: {

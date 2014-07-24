@@ -1,5 +1,5 @@
 #Kaiser
-####_A conventional way to bind logic to DOM elements_
+####_A conventional way to write JS_
 
 ###Install with bower
 
@@ -88,23 +88,14 @@ Kaiser.Middleware.create('offline', function($el) {
     return $clone;
 });
 ```
-To import the above middleware into a module, simply create an `scope.imports` array in the module, and it will be included in the modules scope when the module is initialized.
+To import functions from Middleware or any other namespace, use the import functions and store the return in a variable.
+`var myVar = Kaiser.from(<namespace>).import(<module>);`
 
 ```
 Kaiser.Module.create('test', function(scope) {
-    scope.imports = ['offline']
+    var offline = Kaiser.from('Middleware').import('offline');
     scope.init = function() {
         console.log('The "offline" function is available via "scope.offline"', scope.offline);
     };
 });
-```
-Middleware is also accessible via the `Kaiser.import` function and can be imported anywhere.  `Kaiser.import` simply proxies to `Kaiser.Middleware.find`
-
-```
-...
-
-var offline = Kaiser.import('offline');
-
-...
-```
 This is very much still in development, so any feedback or bug reports is much appreciated.

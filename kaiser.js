@@ -274,8 +274,6 @@
 			$child = $child.length ? $child : module.$('[data-' + name + ']');
 			var action = $child.attr(name) || $child.data(name);
 
-			// addImportedMiddleware(module);
-
 			if ($child.length) {
 				// call the directive function and pass in the module scope, element, and function name
 				directives[name](module, $child, action);
